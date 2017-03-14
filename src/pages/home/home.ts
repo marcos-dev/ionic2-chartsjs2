@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { IonChartComponent } from '../../components/ion-chart/ion-chart';
 import { BarChartPage } from '../bar-chart/bar-chart';
+import { LineChartPage } from '../line-chart/line-chart';
 
 /*
   Generated class for the Home page.
@@ -25,8 +26,10 @@ export class HomePage {
   }
 
   openPage(page) {
-    debugger;
-    this.navCtrl.setRoot(BarChartPage);
+    if(page == 'bar')
+       this.navCtrl.setRoot(BarChartPage);
+    else if(page == 'line')
+        this.navCtrl.setRoot(LineChartPage);
   }
 
 }

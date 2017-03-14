@@ -3,6 +3,7 @@ import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { BarChartPage } from '../pages/bar-chart/bar-chart';
+import { LineChartPage } from '../pages/line-chart/line-chart';
 import {IonChartComponent} from '../components/ion-chart/ion-chart'
 
 @NgModule({
@@ -10,7 +11,8 @@ import {IonChartComponent} from '../components/ion-chart/ion-chart'
     MyApp,
     HomePage,
     IonChartComponent,
-    BarChartPage
+    BarChartPage,
+    LineChartPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -20,7 +22,8 @@ import {IonChartComponent} from '../components/ion-chart/ion-chart'
     MyApp,
     HomePage,
     IonChartComponent,
-    BarChartPage
+    BarChartPage,
+    LineChartPage
 
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]

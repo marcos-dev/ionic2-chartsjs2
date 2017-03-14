@@ -4,6 +4,7 @@ import { StatusBar, Splashscreen } from 'ionic-native';
 
 import { HomePage } from '../pages/home/home';
 import { BarChartPage } from '../pages/bar-chart/bar-chart';
+import { LineChartPage } from '../pages/line-chart/line-chart';
 
 
 @Component({
@@ -23,6 +24,7 @@ export class MyApp {
     this.pages = [
       { title: 'Home',  component: HomePage, icon: 'home' },
       { title: 'Bar Chart',  component: BarChartPage, icon: 'stats' },
+      { title: 'Line Chart',  component: LineChartPage, icon: 'pulse' },
     ];
 
   }
