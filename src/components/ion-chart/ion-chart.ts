@@ -23,7 +23,7 @@ import { Chart } from 'chart.js';
 export class IonChartComponent {
 debugger
   @Input('headerTitle') textHeader;
-
+  @Input('type') chartType;
   @ViewChild('baseCanvas') baseCanvas;
 
   baseChart: any;
@@ -35,17 +35,17 @@ debugger
   }
 
   ngOnInit () {
+    var self = this;
+    self.baseChart = new Chart(this.baseCanvas.nativeElement, {
 
-    this.baseChart = new Chart(this.baseCanvas.nativeElement, {
-
-              type: 'bar',
+              type: self.chartType,
               data: {
                   labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
                   datasets: [{
                       label: 'Accesses',
                       data: [20, 19, 3, 5, 2, 3, 8, 10, 6, 15, 16, 18],
                       backgroundColor: [
-                          'rgba(255, 99, 132, 1)',
+                          'rgba(255, 99, 50, 1)',
                           'rgba(54, 162, 235, 1)',
                           'rgba(255, 206, 86, 1)',
                           'rgba(75, 192, 192, 1)',
@@ -59,7 +59,7 @@ debugger
                           'rgba(176, 110, 68, 1)'
                       ],
                       borderColor: [
-                          'rgba(255,99,132,1)',
+                          'rgba(255,99,50,1)',
                           'rgba(54, 162, 235, 1)',
                           'rgba(255, 206, 86, 1)',
                           'rgba(75, 192, 192, 1)',
@@ -77,11 +77,19 @@ debugger
               },
               options: {
                   scales: {
-                      yAxes: [{
+                    xAxes: [{
+                      gridLines: {
+                          display:false
+                      }
+                     }],
+                    yAxes: [{
+                        gridLines: {
+                             display:false
+                          },
                           ticks: {
                               beginAtZero:true
                           }
-                      }]
+                    }]
                   }
               }
 
