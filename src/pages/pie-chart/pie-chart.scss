@@ -1,3 +1,15 @@
-page-pie-chart {
+.ios, .md {
+
+page-pie-chart  {
+
+        .scroll-content {
+            background-color: map-get($colors, light);
+        }
+
+        ion-card-header {
+            font-weight: bold;
+        }
+
+    }
 
 }
