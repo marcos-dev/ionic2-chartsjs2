@@ -3,6 +3,7 @@ import { NavController, NavParams } from 'ionic-angular';
 import { IonChartComponent } from '../../components/ion-chart/ion-chart';
 import { BarChartPage } from '../bar-chart/bar-chart';
 import { LineChartPage } from '../line-chart/line-chart';
+import { PieChartPage } from '../pie-chart/pie-chart';
 
 /*
   Generated class for the Home page.
@@ -30,6 +31,8 @@ export class HomePage {
        this.navCtrl.setRoot(BarChartPage);
     else if(page == 'line')
         this.navCtrl.setRoot(LineChartPage);
+     else if(page == 'pie')
+        this.navCtrl.setRoot(PieChartPage);
   }
 
 }

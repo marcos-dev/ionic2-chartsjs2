@@ -12,11 +12,9 @@ import { NavController, NavParams } from 'ionic-angular';
   templateUrl: 'pie-chart.html'
 })
 export class PieChartPage {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {}
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad PieChartPage');
+public title: string;
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
+      this.title = "Pie Chart Title";
   }
 
 }
