@@ -13,10 +13,10 @@ import { NavController, NavParams } from 'ionic-angular';
 })
 export class LineChartPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {}
+public title: string;
 
-  ionViewDidLoad() {
-
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
+      this.title = "Line Chart Title";
   }
 
 }

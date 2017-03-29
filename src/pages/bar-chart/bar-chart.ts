@@ -16,8 +16,4 @@ public title: string;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
       this.title = "Bar Chart Title";
   }
-
-  ionViewDidLoad() {
-
-  }
 }
